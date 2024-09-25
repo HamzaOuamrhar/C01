@@ -5,30 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: houamrha <houamrha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/25 13:51:08 by houamrha          #+#    #+#              #
-#    Updated: 2024/09/25 13:51:11 by houamrha         ###   ########.fr        #
+#    Created: 2024/09/25 13:26:17 by houamrha          #+#    #+#              #
+#    Updated: 2024/09/25 14:41:24 by houamrha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Name = zombieHorde
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
-OBJ = $(SRC:.cpp=.o)
 
-all : $(Name)
+all : ref
 
-$(Name) : $(OBJ)
-	c++ $(FLAGS) $(OBJ) -o $@
-
-%.o : %.cpp Zombie.hpp
-	c++ $(FLAGS) -c $< -o $@
+ref : main.cpp
+	c++ $(FLAGS) main.cpp -o ref
 
 clean :
-	rm -f $(OBJ)
+	rm -f ref
 
-fclean : clean
-	rm -f $(Name)
-
-re : fclean all
+re : all clean
 
 .PHONY : clean
