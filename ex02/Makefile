@@ -6,7 +6,7 @@
 #    By: houamrha <houamrha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:26:17 by houamrha          #+#    #+#              #
-#    Updated: 2024/09/25 14:41:24 by houamrha         ###   ########.fr        #
+#    Updated: 2024/10/01 11:56:00 by houamrha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ ref : main.cpp
 clean :
 	rm -f ref
 
-re : all clean
+fclean : clean
+
+re : all fclean
 
 .PHONY : clean
