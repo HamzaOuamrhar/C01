@@ -6,7 +6,7 @@
 /*   By: houamrha <houamrha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 17:47:29 by houamrha          #+#    #+#             */
-/*   Updated: 2024/09/26 11:04:57 by houamrha         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:45:30 by houamrha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ int main(int argc, char **argv)
 	else
 	{
 		std::string fileName = argv[1];
-		std::ifstream input(fileName);
+		std::ifstream input(fileName.c_str());
 		std::string line;
 		std::string s1 = argv[2];
 		std::string s2 = argv[3];
 		if (!input.is_open())
 			return (std::cout << "Cannot open file\n", 1);
-		std::ofstream output(fileName + ".replace");
+		std::ofstream output((fileName + ".replace").c_str());
 		if (!output.is_open())
 			return (std::cout << "Cannot create file\n", 1);
 		while (1)
