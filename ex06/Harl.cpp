@@ -6,7 +6,7 @@
 /*   By: houamrha <houamrha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:30:16 by houamrha          #+#    #+#             */
-/*   Updated: 2024/09/26 18:33:20 by houamrha         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:08:32 by houamrha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,5 @@ int	Harl::complain(std::string level)
 			}
 		}
 	}
-	return (std::cout << "No such level!\n", 1);
+	return (std::cout << "[ Probably complaining about insignificant problems ]\n", 1);
 }
