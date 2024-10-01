@@ -6,7 +6,7 @@
 /*   By: houamrha <houamrha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:30:16 by houamrha          #+#    #+#             */
-/*   Updated: 2024/10/01 15:08:32 by houamrha         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:12:43 by houamrha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	Harl::warning(void)
 }
 void	Harl::error(void)
 {
-	std::cout << "[ error ]" << std::endl;
+	std::cout << "[ ERROR ]" << std::endl;
 	std::cout << "This is unacceptable! I want to speak to the manager now.\n\n";
 }
 
