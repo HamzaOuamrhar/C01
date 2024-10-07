@@ -14,15 +14,15 @@
 
 int main()
 {
-	std::string ref = "HI THIS IS BRAIN";
-	std::string *ref_p = &ref;
-	std::string &ref_ref = ref;
+	std::string string = "HI THIS IS BRAIN";
+	std::string *stringPTR = &string;
+	std::string &stringREF = string;
 
-	std::cout << &ref << std::endl;
-	std::cout << ref_p << std::endl;
-	std::cout << &ref_ref << std::endl;
+	std::cout << &string << std::endl;
+	std::cout << stringPTR << std::endl;
+	std::cout << &stringREF << std::endl;
 
-	std::cout << ref << std::endl;
-	std::cout << *ref_p << std::endl;
-	std::cout << ref_ref << std::endl;
+	std::cout << string << std::endl;
+	std::cout << *stringPTR << std::endl;
+	std::cout << stringREF << std::endl;
 }
