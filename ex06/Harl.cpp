@@ -38,23 +38,25 @@ void	Harl::error(void)
 
 int	Harl::complain(std::string level)
 {
+	int	i;
+
 	std::string	levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	for (int i = 0; i < 4; i++)
+	for (i = 0; i < 4; i++)
 	{
 		if (levels[i] == level)
-		{
-			switch(i)
-			{
-				case 0:
-					return (debug(), info(), warning(), error(), 0);
-				case 1:
-					return (info(), warning(), error(), 0);
-				case 2:
-					return (warning(), error(), 0);
-				case 3:
-					return (error(), 0);
-			}
-		}
+			break ;
 	}
-	return (std::cout << "[ Probably complaining about insignificant problems ]\n", 1);
+	switch(i)
+	{
+		case 0:
+			return (debug(), info(), warning(), error(), 0);
+		case 1:
+			return (info(), warning(), error(), 0);
+		case 2:
+			return (warning(), error(), 0);
+		case 3:
+			return (error(), 0);
+		default:
+			return (std::cout << "[ Probably complaining about insignificant problems ]\n", 1);
+	}
 }
