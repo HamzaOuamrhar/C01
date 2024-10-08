@@ -19,6 +19,11 @@ void	replace_line(std::string &line, std::ofstream &output, std::string &s1, std
 	size_t	pos;
 
 	pos = 0;
+	if (s1.empty())
+	{
+		output << line;
+		return ;
+	}
 	while (pos < line.length())
 	{
 		pos = line.find(s1, pos);
